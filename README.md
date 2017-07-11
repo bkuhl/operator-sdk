@@ -18,6 +18,7 @@ This is the readme from a project where I served as the lead sdk designer.
   * [Notifications](#laravel-notifications)
 
 <a name="installation"/>
+
 ## Installation
 
 _Installation instructions have been removed_
@@ -30,6 +31,7 @@ $app->register(Operator\LumenServiceProvider::class);
 ```
 
 <a name="usage"/>
+
 ## Usage
 
 ```php
@@ -39,6 +41,7 @@ $operator = new Operator($apiKey);
  > If using Lumen, you can just dependency inject this class.
 
 <a name="provisioning-numbers"/>
+
 ### Provisioning Numbers
 
 Provision a phone number in a given country/area:®
@@ -63,6 +66,7 @@ $operator->number()
  > Currently provisioning specific numbers is not supported.
 
 <a name="incoming-calls"/>
+
 ### Incoming Calls
 
 ```php
@@ -73,6 +77,7 @@ $operator->number('1-555-463-4356')
 ```
 
 <a name="outgoing-calls"/>
+
 ### Outgoing Calls
 ```php
 $operator->number('555-555-5555')
@@ -83,11 +88,13 @@ $operator->number('555-555-5555')
 ```
 
 <a name="call-interactions"/>
+
 ## Call Interactions
 
 You can interact with a caller or recipient of a call in many ways.  These apply to both inbound and outbound calls.
 
 <a name="say"/>
+
 ### Say
 
 Speak text to the other end of the line.  Text will be spoken in a woman's voice.
@@ -101,6 +108,7 @@ $operator->number('555-555-5555')
 ```
 
 <a name="play"/>
+
 ### Play
 
 Play an audio file to the other end of the line.
@@ -114,6 +122,7 @@ $operator->number('1-555-463-4356')
 ```
 
 <a name="collect"/>
+
 ### Collect
 
 Prompt the user for input, and save their input in the call session.
@@ -143,6 +152,7 @@ $operator->number('555-555-5555')
 ```
 
 <a name="voicemail"/>
+
 ### Voicemail
 
 When a number is called, prompt the user to leave a voicemail.
@@ -220,6 +230,7 @@ $operator->number('555-555-5555')
 ```
 
 <a name="menu"/>
+
 ### Menu
 
 When a number is called, prompt the user with a menu of options
@@ -289,6 +300,7 @@ $operator->number('555-555-5555')
 ```
 
 <a name="hangup"/>
+
 ### Hangup
 
 End the current call.
@@ -318,6 +330,7 @@ For Laravel, add this to the providers array in `config/app.php`:
 ```
 
 <a name="laravel-notifications"/>
+
 ### Notifications
 
 The SDK will automatically interpret notification callbacks from Operator and fire events within your application.  Supported events are:
